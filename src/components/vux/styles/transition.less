@@ -1,0 +1,107 @@
+.vux-fade-enter-active,.vux-fade-leave-active {
+  opacity: 1;
+  transition: opacity linear 0.2s
+}
+
+.vux-fade-enter, .vux-fade-leave-to {
+  opacity: 0;
+}
+
+.vux-dialog-enter-active,.vux-dialog-leave-active {
+  opacity: 1;
+  transition-duration: .4s;
+  transform: translate(-50%, -50%) scale(1)!important;
+  transition-property: transform, opacity!important;
+}
+
+.vux-dialog-enter, .vux-dialog-leave-to {
+  opacity: 0;
+}
+
+.vux-dialog-enter {
+  transform: translate(-50%, -50%) scale(1.185)!important;
+}
+
+.vux-dialog-leave-to {
+  transform: translate(-50%, -50%) scale(1)!important;
+}
+
+/**
+* vue-router transition
+*/
+
+.router-view {
+  width: 100%;
+  animation-duration: .5s;
+  animation-fill-mode: both;
+  backface-visibility: hidden;
+}
+
+.vux-pop-out-enter-active,
+.vux-pop-out-leave-active,
+.vux-pop-in-enter-active,
+.vux-pop-in-leave-active {
+  will-change: transform;
+  height: 100%;
+  position: absolute;
+  left: 0;
+}
+
+.vux-pop-out-enter-active {
+  perspective: 1000;
+  animation-name: popInLeft;
+}
+.vux-pop-out-leave-active {
+  animation-name: popOutRight;
+}
+.vux-pop-in-enter-active {
+  perspective: 1000;
+  animation-name: popInRight;
+}
+.vux-pop-in-leave-active {
+  animation-name: popOutLeft;
+}
+@keyframes popInLeft {
+  from {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes popOutLeft {
+  from {
+    opacity: 1;
+  }
+  to {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+@keyframes popInRight {
+  from {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes popOutRight {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s ease;
+}
+.fade-enter, .fade-leave-active {
+  opacity: 0
+}
