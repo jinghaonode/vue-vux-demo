@@ -16,6 +16,7 @@
     "object-assign": "^4.1.1",
     "validator": "^6.2.1",
     "vue": "^2.1.10",
+    "vue-cli": "^2.8.1",
     "vue-router": "^2.2.0",
     "vuex": "^2.1.2",
     "vux": "^2.1.0",

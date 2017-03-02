@@ -2,24 +2,24 @@
   <div>
 
            <div class="pad20">
-               <group>
-                   <cell title="Vuxsdddddddd" value="Cool" is-link></cell>
-               </group>
+              <group>
+                   <Cell title="Vuxsdddddddd" value="Cool" is-link></Cell>
+               </group> 
                <p>页面1</p>
-               <p>页面2</p>
+               <p>页面20</p>
 
            </div>
-      
+
 
   </div>
 </template>
 
 <script>
-   import Cell from 'vux'   ;
+    import {Group, Cell} from 'vux'
   export default {
       components: {
-          Cell
-      },
+          Group, Cell
+      }  ,
     data () {
       return {
         page: 1,
@@ -34,7 +34,7 @@
     mounted(){
       this.onRefresh()
     },
-    
+
     methods: {
       onRefresh () {
         this.$loading.show()
