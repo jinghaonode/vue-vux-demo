@@ -15,11 +15,10 @@
 </template>
 
 <script>
-   import Cell from 'vux'   ;
+/*   import Array2stringFilter from 'vux'   ;
+   console.log(Array2stringFilter)*/
   export default {
-      components: {
-          Cell
-      },
+
     data () {
       return {
         page: 1,
