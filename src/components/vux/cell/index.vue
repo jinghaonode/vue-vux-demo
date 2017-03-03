@@ -21,7 +21,7 @@
 
 <script>
 import InlineDesc from '../inline-desc'
-import { go } from '../../libs/router'
+import { go } from '../libs/router'
 
 export default {
   components: {
@@ -49,10 +49,10 @@ export default {
 </script>
 
 <style lang="less">
-@import '../../styles/variable.less';
-@import '../../styles/tap.less';
-@import '../../styles/weui/base/mixin/setArrow.less';
-@import '../../styles/weui/widget/weui_cell/weui_cell_global';
+@import '../styles/variable.less';
+@import '../styles/tap.less';
+@import '../styles/weui/base/mixin/setArrow.less';
+@import '../styles/weui/widget/weui_cell/weui_cell_global.less';
 
 .vux-cell-primary {
   flex: 1;

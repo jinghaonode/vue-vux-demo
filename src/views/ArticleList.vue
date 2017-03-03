@@ -3,7 +3,7 @@
 
            <div class="pad20">
               <group>
-                   <Cell title="Vuxsdddddddd" value="Cool" is-link></Cell>
+                   <cell title="Vuxsdddddddd" value="Cool" is-link></cell>
                </group> 
                <p>页面1</p>
                <p>页面20</p>
@@ -15,11 +15,7 @@
 </template>
 
 <script>
-    import {Group, Cell} from 'vux'
     export default {
-      components: {
-          Group, Cell
-      }  ,
     data () {
       return {
         page: 1,

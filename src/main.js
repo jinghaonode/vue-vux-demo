@@ -8,16 +8,15 @@ import XInput from './components/vux/x-input'
 import XTextarea from './components/vux/x-textarea'
 import Selector from './components/vux/selector'
 import Group from './components/vux/group'
+import cell from './components/vux/cell'
 import XButton from './components/vux/x-button'
-import {Flexbox, FlexboxItem} from './components/vux/flexbox'
 import {Tab, TabItem} from './components/vux/tab'
 import Scroller from './components/vux/scroller'
 import Spinner from './components/vux/spinner'
 import Popup from './components/vux/popup'
 import ToastPlugins from './components/plugins/toast'
 import LoadingPlugins from './components/plugins/loading'
- 
- 
+
 
 const FastClick = require('fastclick')
 FastClick.attach(document.body)
@@ -33,12 +32,11 @@ Vue.component('Tab', Tab)
 Vue.component('TabItem', TabItem)
 Vue.component('Tabbar', Tabbar)
 Vue.component('TabbarItem', TabbarItem)
-Vue.component('Flexbox', Flexbox)
-Vue.component('FlexboxItem', FlexboxItem)
 Vue.component('XInput', XInput)
 Vue.component('XTextarea', XTextarea)
 Vue.component('Selector', Selector)
 Vue.component('Group', Group)
+Vue.component('cell', cell)
 Vue.component('XButton', XButton)
 Vue.component('Scroller', Scroller)
 Vue.component('Spinner', Spinner)
