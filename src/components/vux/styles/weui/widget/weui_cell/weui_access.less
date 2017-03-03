@@ -1,22 +1,28 @@
 @import "../../base/fn";
 
-.weui_cells_access {
-    .weui_cell:not(.no_access) {
+.weui-cell_access {
+  z-index:119;
+    .weui-cell:not(.no_access) {
         // 在cell_access和其它类型的cell混着用的场景下，其它cell要加no_access，避免有点击态
         .setTapColor;
         &:active {
             background-color: #ECECEC;
         }
     }
-    a.weui_cell {
+    a.weui-cell {
         color: inherit;
     }
-    .weui_cell_ft {
+    .weui-cell__ft {
+      -webkit-flex:1;
+      float:right;
+      z-index:12;
         &:after {
             content: " ";
             .setArrow_Wap(right, 6px, #C8C8CD, 2px);
-            top: -1px;
-            margin-left:.3em;
+            position: absolute;
+            top: 50%;
+            margin-top: -4px;
+            right: 20px;
         }
     }
 }

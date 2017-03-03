@@ -49,12 +49,13 @@ export default {
 </script>
 
 <style lang="less">
+
 @import '../styles/variable.less';
 @import '../styles/tap.less';
 @import '../styles/weui/base/mixin/setArrow.less';
-@import '../styles/weui/widget/weui_cell/weui_cell_global.less';
+    @import '../styles/weui/widget/weui_cell/weui_cell_global.less';
+    @import '../styles/weui/widget/weui_cell/weui_access.less';
+.weui-cell__ft{ -webkit-flex:1}
+ 
 
-.vux-cell-primary {
-  flex: 1;
-}
 </style>

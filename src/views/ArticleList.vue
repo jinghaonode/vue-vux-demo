@@ -1,16 +1,13 @@
 <template>
+
   <div>
-
+      <group>
+          <cell title="one" value="rightsssss"></cell>
+          <cell title="two" is-link></cell>
+          <cell title="three" value="value"></cell>
+      </group>
            <div class="pad20">
-              <group>
-                   <cell title="Vuxsdddddddd" value="Cool" is-link></cell>
-               </group> 
-               <p>页面1</p>
-               <p>页面20</p>
-
            </div>
-
-
   </div>
 </template>
 
@@ -34,7 +31,7 @@
     methods: {
       onRefresh () {
         this.$loading.show()
-        setTimeout(()=>{ this.$loading.hide()},5000)
+        setTimeout(()=>{ this.$loading.hide()},3000)
       },
 
     },
