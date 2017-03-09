@@ -9,11 +9,11 @@
 </head>
 <body>
 <div id="app">
-  <transition :name="$store.getters.direction === 'forward' ? 'vux-pop-in' : 'vux-pop-out'">
+
     <keep-alive>
       <router-view class="router-view"></router-view>
     </keep-alive>
-  </transition>
+
 
     
 </div>
