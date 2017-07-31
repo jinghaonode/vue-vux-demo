@@ -9,6 +9,7 @@
     "dev": "node build/dev-server.js"
   },
   "dependencies": {
+    "vue-verify-plugin": "^2.0.0",
     "array-find": "^1.0.0",
     "axios": "^0.15.3",
     "fastclick": "^1.0.6",
@@ -18,8 +19,9 @@
     "vue": "^2.1.10",
     "vue-cli": "^2.8.1",
     "vue-router": "^2.2.0",
+    "vue-verify-plugin": "^2.0.0",
     "vuex": "^2.1.2",
-    "vux": "^2.1.0",
+    "vux": "^2.5.3",
     "vux-loader": "^1.0.46",
     "vux-xscroll": "^3.1.8"
   },

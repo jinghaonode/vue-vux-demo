@@ -1,22 +1,35 @@
 import Vue from 'vue'
 import router from './router'
 import store from './store'
-import axios from './components/plugins/axios'
-import {Tabbar, TabbarItem} from './components/vux/tabbar'
+import axios from './components/axios'
 import * as filters from './filters'
-import XInput from './components/vux/x-input'
-import XTextarea from './components/vux/x-textarea'
-import Selector from './components/vux/selector'
-import Group from './components/vux/group'
-import cell from './components/vux/cell'
-import XButton from './components/vux/x-button'
-import {Tab, TabItem} from './components/vux/tab'
-import Scroller from './components/vux/scroller'
-import Spinner from './components/vux/spinner'
-import Popup from './components/vux/popup'
-import ToastPlugins from './components/plugins/toast'
-import LoadingPlugins from './components/plugins/loading'
 
+ 
+// 全局引入vux组件库
+/*import Group from './components/Group'
+Vue.component('Group', Group)
+import Cell from './components/Cell'
+Vue.component('Cell', Cell)*/
+
+
+// 全局引入vux提供的插件
+import {LoadingPlugin ,AlertPlugin, ToastPlugin} from 'vux'
+Vue.use(LoadingPlugin)
+Vue.use(AlertPlugin)
+Vue.use(ToastPlugin)
+
+// 表单验证插件，不需要请注释掉
+import verify from "vue-verify-plugin";
+var myRules = {
+    phone: {
+        test: /^1[34578]\d{9}$/,
+        message: "电话号码格式不正确"
+    }
+}
+Vue.use(verify, {
+    blur: true,// 是否失去焦点后开始验证
+    rules: myRules
+});
 
 const FastClick = require('fastclick')
 FastClick.attach(document.body)
@@ -25,25 +38,9 @@ Object.keys(filters).forEach(key => {
   Vue.filter(key, filters[key])
 })
 
-Vue.use(LoadingPlugins)
-Vue.use(ToastPlugins)
-Vue.use(axios)
-Vue.component('Tab', Tab)
-Vue.component('TabItem', TabItem)
-Vue.component('Tabbar', Tabbar)
-Vue.component('TabbarItem', TabbarItem)
-Vue.component('XInput', XInput)
-Vue.component('XTextarea', XTextarea)
-Vue.component('Selector', Selector)
-Vue.component('Group', Group)
-Vue.component('cell', cell)
-Vue.component('XButton', XButton)
-Vue.component('Scroller', Scroller)
-Vue.component('Spinner', Spinner)
-Vue.component('Popup', Popup)
+// 在组件中可以直接使用this.$axios访问
+Vue.prototype.$axios = axios;
 
- 
- 
 // simple history management
 const history = window.sessionStorage
 history.clear()
@@ -64,20 +61,11 @@ router.beforeEach((to, from, next) => {
     to.path !== '/' && history.setItem(to.path, historyCount)
     store.commit('SET_DIRECTION', 'forward')
   }
-  if (to.meta.auth) {
-    let accessToken = localStorage.getItem('accessToken')
-    if (accessToken === 'null' || accessToken === null) {
-      next({
-        name: 'login'
-      })
-    } else {
-      next()
-    }
-  } else {
     next()
-  }
 })
-
+router.afterEach((to, from, next) => {
+     
+})
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
