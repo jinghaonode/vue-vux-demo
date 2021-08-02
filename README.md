@@ -12,7 +12,6 @@
 #### 本项目特点：
 - 已配备vue全家桶，优化后的项目骨架，clone后直接用
 - 配合vux，大中型项目轻松搞，不加班
-- 已剔除或者修改了几个在windows上容易出错的包，拯救下没有苹果的苦逼程序员。
 
 > vux的使用请参照中文文档[：https://vux.li/#/zh-CN/components](https://vux.li/#/zh-CN/components)
 
